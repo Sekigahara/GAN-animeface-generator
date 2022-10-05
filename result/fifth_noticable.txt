@@ -1,0 +1,25 @@
+Epoch : 100
+batch size : 256
+adam = lr : 0.0002 beta : 0.5
+
+generator : 
+
+conv2dT(64, (2,2))
+relu()
+bn()
+conv2dT(64, (4,4))
+relu()
+bn()
+conv2dT(128, (4,4))
+relu()
+bn()
+conv2dT(3, (2,2))
+tanh()
+
+discriminator :
+conv2d(16, (3,3))
+leakyrelu(alpha=0.2)
+conv2d(32, (3,3))
+leakyrelu(alpha=0.2)
+flat()
+dropout(0.2)
