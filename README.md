@@ -17,9 +17,11 @@ pip install -r requirements.txt
 
 ## Scenario
 ### First Scenario
-This scenario implemented in ```1. model.ipynb``` script.
+This scenario implemented in ```1. model.ipynb``` script. </br>
 In this scenario, the training policy will be trained with certain amount of images from dataset by dividing the total of the images by the batch size, the result of this division will be used to create batch training. By creating a loop from zero until reach batch training value, the sample of images will be taken with a certain range from the array with this calculation ```batch_training * BATCH_SIZE until (batch_training + 1) * BATCH_SIZE ```
 
 ### Second Scenario
+This scenario implemented in ```2. model.ipynb``` script. </br>
+
 ## Result and Analysis
 
