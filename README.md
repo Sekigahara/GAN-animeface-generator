@@ -19,11 +19,81 @@ pip install -r requirements.txt
 ### First Scenario
 This scenario implemented in ```1. model.ipynb``` script. </br>
 
-In this scenario, the training policy will be trained with certain amount of images from dataset by dividing the total of the images by the batch size, the result of this division will be used to create batch training. By creating a loop from zero until reach batch training value, the sample of images will be taken with a certain range from the array with this calculation ```batch_training * BATCH_SIZE until (batch_training + 1) * BATCH_SIZE ```. In the model context, the discriminator and generator will fine-tuned manually and the input is of noise ```512 x 4 x 4```
+In this scenario, the training policy will be trained with certain amount of images from dataset by dividing the total of the images by the batch size, the result of this division will be used to create batch training. By creating a loop from zero until reach batch training value, the sample of images will be taken with a certain range from the array with this calculation ```batch_training * BATCH_SIZE until (batch_training + 1) * BATCH_SIZE```. In the model context, the discriminator and generator will fine-tuned manually and the input of generater is ```512 x 4 x 4```
+
 ### Second Scenario
 This scenario implemented in ```2. model.ipynb``` script. </br>
 
 Same rule is applied in this scenario compared to the first scnario, however the numbers of trained data are controlled with ```tf.data.Dataset``` and due to some memory leakage the datatype is converted to lower floating point(from float32 to float16). In the model context, the discriminator and generator models compared to the first scenario will be bigger and using various advanced paramater such as epsilon and momentum in BN and kernel initializer to match the random noise distribution.
 
 ## Result and Analysis
+### First Scenario
+<b>Note : </b> The model configuration will be written inside with this format ```number_of_layer_stack x layer([parameter_inside:value])```.
+<b>List of Abbreviation : </b> ```fs=filter size``` and ```ks=kernel size```
+<details markdown="1">
+<summary>Click here to see result summary</summary>
+</br>
+<table style="width:200%">
+  <tr> 
+      <th> Parameter </th>
+      <th> Model Configuration </th>
+      <th> Generator Loss </th>
+      <th> Discriminator Real Loss </th>
+      <th> Discriminator Fake Loss </th>
+      <th> Result Sample </th>
+  </tr>
+  <tr> 
+      <td> Adam learning rate:0.0003, beta:0.5, epoch:100, batch size:256</td>
+      <td> Generator:</br> 4xTranspooseConv2D( </br>
+        &ensp;[fs=32, ks=(4, 4)], </br>&ensp;[fs=64, ks=(4, 4)], </br>
+        &ensp;[fs=128, ks=(4, 4)], </br>&ensp;[fs=3, ks=(4, 4)] </br>) </br>
+        Discriminator:</br> 2xConv2D( </br>
+        &ensp;[fs=32, ks=(3, 3)], </br>&ensp;[fs=32, ks=(3, 3)] </br>)</td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834317-13484e36-212a-4cda-b6eb-a12d417ce302.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834437-3e0cea19-dd3c-4e70-b734-2fef24fb1118.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834567-78dc1cff-d3e2-4ed7-8198-78c9eea0aeda.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834822-b3450d6e-f3fd-40cf-a8bd-677f90460ed3.jpg"/> </td>
+  </tr>
+  <tr> 
+      <th> Parameter </th>
+      <th> Model Configuration </th>
+      <th> Generator Loss </th>
+      <th> Discriminator Real Loss </th>
+      <th> Discriminator Fake Loss </th>
+      <th> Result Sample </th>
+  </tr>
+  <tr> 
+      <td> Adam learning rate:0.0003, beta:0.5, epoch:100, batch size:256</td>
+      <td> Generator:</br> 4xTranspooseConv2D( </br>
+        &ensp;[fs=32, ks=(4, 4)], </br>&ensp;[fs=64, ks=(4, 4)], </br>
+        &ensp;[fs=128, ks=(4, 4)], </br>&ensp;[fs=3, ks=(4, 4)] </br>) </br>
+        Discriminator:</br> 2xConv2D( </br>
+        &ensp;[fs=32, ks=(3, 3)], </br>&ensp;[fs=32, ks=(3, 3)] </br>)</td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834317-13484e36-212a-4cda-b6eb-a12d417ce302.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834437-3e0cea19-dd3c-4e70-b734-2fef24fb1118.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834567-78dc1cff-d3e2-4ed7-8198-78c9eea0aeda.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834822-b3450d6e-f3fd-40cf-a8bd-677f90460ed3.jpg"/> </td>
+  </tr>
+  <tr> 
+      <th> Parameter </th>
+      <th> Model Configuration </th>
+      <th> Generator Loss </th>
+      <th> Discriminator Real Loss </th>
+      <th> Discriminator Fake Loss </th>
+      <th> Result Sample </th>
+  </tr>
+  <tr> 
+      <td> Adam learning rate:0.0003, beta:0.5, epoch:100, batch size:256</td>
+      <td> Generator:</br> 4xTranspooseConv2D( </br>
+        &ensp;[fs=32, ks=(4, 4)], </br>&ensp;[fs=64, ks=(4, 4)], </br>
+        &ensp;[fs=128, ks=(4, 4)], </br>&ensp;[fs=3, ks=(4, 4)] </br>) </br>
+        Discriminator:</br> 2xConv2D( </br>
+        &ensp;[fs=32, ks=(3, 3)], </br>&ensp;[fs=32, ks=(3, 3)] </br>)</td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834317-13484e36-212a-4cda-b6eb-a12d417ce302.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834437-3e0cea19-dd3c-4e70-b734-2fef24fb1118.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834567-78dc1cff-d3e2-4ed7-8198-78c9eea0aeda.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/195834822-b3450d6e-f3fd-40cf-a8bd-677f90460ed3.jpg"/> </td>
+  </tr>
 
+
+### Second Scenario
