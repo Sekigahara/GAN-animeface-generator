@@ -63,16 +63,16 @@ Same rule is applied in this scenario compared to the first scnario, however the
       <th> Result Sample </th>
   </tr>
   <tr> 
-      <td> Adam learning rate:0.0003, beta:0.5, epoch:100, batch size:256</td>
+      <td> Adam learning rate:0.0001, beta:0.5, epoch:100, batch size:256</td>
       <td> Generator:</br> 4xTranspooseConv2D( </br>
         &ensp;[fs=32, ks=(4, 4)], </br>&ensp;[fs=64, ks=(4, 4)], </br>
         &ensp;[fs=128, ks=(4, 4)], </br>&ensp;[fs=3, ks=(4, 4)] </br>) </br>
         Discriminator:</br> 2xConv2D( </br>
         &ensp;[fs=32, ks=(3, 3)], </br>&ensp;[fs=32, ks=(3, 3)] </br>)</td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834317-13484e36-212a-4cda-b6eb-a12d417ce302.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834437-3e0cea19-dd3c-4e70-b734-2fef24fb1118.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834567-78dc1cff-d3e2-4ed7-8198-78c9eea0aeda.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834822-b3450d6e-f3fd-40cf-a8bd-677f90460ed3.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196091721-d9f91e1b-98ee-43d3-afb1-b41d6b371375.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196091515-0ad40c0c-183b-4f68-9610-009cfc193fd3.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196091540-5640f56c-abb3-4d7b-bbcc-79f3cdac4d9d.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196091774-cdaa44aa-ce46-4f05-ba36-db0529ab5180.jpg"/> </td>
   </tr>
   <tr> 
       <th> Parameter </th>
@@ -83,17 +83,16 @@ Same rule is applied in this scenario compared to the first scnario, however the
       <th> Result Sample </th>
   </tr>
   <tr> 
-      <td> Adam learning rate:0.0003, beta:0.5, epoch:100, batch size:256</td>
+      <td> Adam learning rate:0.0002, beta:0.5, epoch:100, batch size:256</td>
       <td> Generator:</br> 4xTranspooseConv2D( </br>
         &ensp;[fs=32, ks=(4, 4)], </br>&ensp;[fs=64, ks=(4, 4)], </br>
         &ensp;[fs=128, ks=(4, 4)], </br>&ensp;[fs=3, ks=(4, 4)] </br>) </br>
         Discriminator:</br> 2xConv2D( </br>
         &ensp;[fs=32, ks=(3, 3)], </br>&ensp;[fs=32, ks=(3, 3)] </br>)</td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834317-13484e36-212a-4cda-b6eb-a12d417ce302.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834437-3e0cea19-dd3c-4e70-b734-2fef24fb1118.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834567-78dc1cff-d3e2-4ed7-8198-78c9eea0aeda.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/195834822-b3450d6e-f3fd-40cf-a8bd-677f90460ed3.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196096769-c6c599b3-21d6-4ddd-94f8-ecc8895fb152.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196096812-3deb84a1-8aa6-4c18-a289-35358abc9422.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196096843-97758c51-3777-473f-9e94-a2f327a93edb.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196096900-0c485720-394a-42e0-9006-03dd5a0d253c.jpg"/> </td>
   </tr>
-
 
 ### Second Scenario
