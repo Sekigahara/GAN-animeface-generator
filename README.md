@@ -55,14 +55,6 @@ Same rule is applied in this scenario compared to the first scnario, however the
       <td> <img src="https://user-images.githubusercontent.com/54882818/195834822-b3450d6e-f3fd-40cf-a8bd-677f90460ed3.jpg"/> </td>
   </tr>
   <tr> 
-      <th> Parameter </th>
-      <th> Model Configuration </th>
-      <th> Generator Loss </th>
-      <th> Discriminator Real Loss </th>
-      <th> Discriminator Fake Loss </th>
-      <th> Result Sample </th>
-  </tr>
-  <tr> 
       <td> Adam learning rate:0.0001, beta:0.5, epoch:100, batch size:256</td>
       <td> Generator:</br> 4xTranspooseConv2D( </br>
         &ensp;[fs=32, ks=(4, 4)], </br>&ensp;[fs=64, ks=(4, 4)], </br>
@@ -73,14 +65,6 @@ Same rule is applied in this scenario compared to the first scnario, however the
       <td> <img src="https://user-images.githubusercontent.com/54882818/196091515-0ad40c0c-183b-4f68-9610-009cfc193fd3.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196091540-5640f56c-abb3-4d7b-bbcc-79f3cdac4d9d.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196091774-cdaa44aa-ce46-4f05-ba36-db0529ab5180.jpg"/> </td>
-  </tr>
-  <tr> 
-      <th> Parameter </th>
-      <th> Model Configuration </th>
-      <th> Generator Loss </th>
-      <th> Discriminator Real Loss </th>
-      <th> Discriminator Fake Loss </th>
-      <th> Result Sample </th>
   </tr>
   <tr> 
       <td> Adam learning rate:0.0002, beta:0.5, epoch:100, batch size:256</td>
@@ -94,5 +78,48 @@ Same rule is applied in this scenario compared to the first scnario, however the
       <td> <img src="https://user-images.githubusercontent.com/54882818/196096843-97758c51-3777-473f-9e94-a2f327a93edb.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196096900-0c485720-394a-42e0-9006-03dd5a0d253c.jpg"/> </td>
   </tr>
+</table>
+</details>
 
 ### Second Scenario
+<b>Note : </b> in this scenario, the only parameter that been changed are ```batch size, addition of batch norm(momentum and epsilon) and weight initialization```.
+<details markdown="1">
+<summary>Click here to see result summary</summary>
+</br>
+<table style="width:200%">
+  <tr> 
+      <th> Parameter Configuration </th>
+      <th> Generator and Discriminator Loss </th>
+      <th> Result Sample </th>
+  </tr>
+  <tr> 
+      <td>
+        <b>General Param </b>: batch size:10, epoch:40 </br>
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.2, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
+        <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
+      </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196102991-2be0bffe-c999-465b-8015-2a4a1961c29f.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196103045-36bd7862-21ee-4cf6-9e55-47959ae07b0c.jpg"/> </td>   
+  </tr>
+  <tr> 
+      <td>
+        <b>General Param </b>: batch size:64, epoch:40 </br>
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.2, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
+        <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
+      </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196103653-0acb5c9f-d21c-4932-a551-16047f797b67.png"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196103701-842d1bd7-7f6d-4e54-b5fc-af6b91dfae0a.jpg"/> </td>   
+  </tr>
+  <tr> 
+      <td>
+        <b>General Param </b>: batch size:64, epoch:40 </br>
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.2 </br> 
+        <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
+      </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196108877-23628a17-5480-4fc7-b3be-6aadb2f678fb.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196108929-68fd6d17-dd32-4c01-9260-53cb805198b8.jpg"/> </td>   
+  </tr>
+</table>
+</details>
+
+## Conclusion
