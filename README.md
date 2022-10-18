@@ -129,7 +129,6 @@ Red = Poor Quality
       <td> <img src="https://user-images.githubusercontent.com/54882818/196108877-23628a17-5480-4fc7-b3be-6aadb2f678fb.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196393826-f8ab1a4e-98f1-4620-9edf-10cd851ade75.jpg"/> </td>
       <td> </td>
-
   </tr>
 </table>
 </details>
