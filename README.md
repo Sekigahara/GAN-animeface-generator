@@ -81,10 +81,14 @@ Same rule is applied in this scenario compared to the first scnario, however the
 </table>
 </details>
 &emsp; The test is conducted with different learning rate simultaneously 0.0003, 0.0001 and 0.0002 and using Adam optimizer with beta parameter of 0.5. With the parameter of 0.0003 the fluctuation of each loss is very noisy, inconsistent and the trend is increasing especially in generator loss which resulting in rough color gradient images. While for the 0.0001 the overall trend is very stable did not improve yet the noises is significantly decreased compared to learning rate of 0.0003, Additionally resulting in way softer color gradient. The last one which is 0.0002 the trend of generator is increases over time and not very noisy, while the discriminator in late epoch started to decreases over a time, overall the fluctuation is steady and did not fluctuative, The generated result, not only the color gradient is softer the model learn enough to form an image which way more close to a face than the previous learning rate. </br>
-&emsp; In a summary, the learning rate of 0.0002 is the most stable learning rate in case of GAN training, the model did not stuck to learn compared to 0.0001 and the color gradient way more softer than 0.0003.
+&emsp; In a summary, the learning rate of 0.0002 is the most stable learning rate in case of GAN training, the model did not stuck to learn compared to 0.0001 and the color gradient way more softer than 0.0003. However further consideration to balance the model is required in order to create a strong adversariality which will improve the result. In addition, the training function may also need to be updated especially for sample selection based on the batch size.
 
 ### Second Scenario
 <b>Note : </b> in this scenario, the only parameter that been changed are ```batch size, addition of batch norm(momentum and epsilon) and weight initialization```.
+<b>Additional Note : </b> The average of good sample is calculated by : ```sum of good sample / total generated sample```
+Green = Good Quality
+Blue = Decent Quality
+Red = Poor Quality
 <details markdown="1">
 <summary>Click here to see result summary</summary>
 </br>
@@ -93,6 +97,7 @@ Same rule is applied in this scenario compared to the first scnario, however the
       <th> Parameter Configuration </th>
       <th> Generator and Discriminator Loss </th>
       <th> Result Sample </th>
+      <th> Average Good Sample </th>
   </tr>
   <tr> 
       <td>
@@ -101,7 +106,9 @@ Same rule is applied in this scenario compared to the first scnario, however the
         <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196102991-2be0bffe-c999-465b-8015-2a4a1961c29f.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/196103045-36bd7862-21ee-4cf6-9e55-47959ae07b0c.jpg"/> </td>   
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196392402-9ce60b18-da3c-4482-b203-f2af0a2bddb9.jpg"/> </td>
+      <td> </td>
+
   </tr>
   <tr> 
       <td>
@@ -110,7 +117,8 @@ Same rule is applied in this scenario compared to the first scnario, however the
         <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196103653-0acb5c9f-d21c-4932-a551-16047f797b67.png"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/196103701-842d1bd7-7f6d-4e54-b5fc-af6b91dfae0a.jpg"/> </td>   
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196393687-e97714d4-2d35-45ed-b649-26384365c805.jpg"/> </td>
+      <td> </td>
   </tr>
   <tr> 
       <td>
@@ -119,7 +127,9 @@ Same rule is applied in this scenario compared to the first scnario, however the
         <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196108877-23628a17-5480-4fc7-b3be-6aadb2f678fb.jpg"/> </td>
-      <td> <img src="https://user-images.githubusercontent.com/54882818/196108929-68fd6d17-dd32-4c01-9260-53cb805198b8.jpg"/> </td>   
+      <td> <img src="https://user-images.githubusercontent.com/54882818/196393826-f8ab1a4e-98f1-4620-9edf-10cd851ade75.jpg"/> </td>
+      <td> </td>
+
   </tr>
 </table>
 </details>
