@@ -84,11 +84,12 @@ Same rule is applied in this scenario compared to the first scnario, however the
 &emsp; In a summary, the learning rate of 0.0002 is the most stable learning rate in case of GAN training, the model did not stuck to learn compared to 0.0001 and the color gradient way more softer than 0.0003. However further consideration to balance the model is required in order to create a strong adversariality which will improve the result. In addition, the training function may also need to be updated especially for sample selection based on the batch size.
 
 ### Second Scenario
-<b>Note : </b> in this scenario, the only parameter that been changed are ```batch size, addition of batch norm(momentum and epsilon) and weight initialization```.
-<b>Additional Note : </b> The average of good sample is calculated by : ```sum of good sample / total generated sample```
-Green = Good Quality
-Blue = Decent Quality
-Red = Poor Quality
+<b>Note : </b> in this scenario, the only parameter that been changed are ```batch size, addition of batch norm(momentum and epsilon) and weight initialization```.</br>
+<b>Additional Note : </b> The average of good sample is calculated by : ```sum of [defined_type] sample / total generated sample``` </br>
+<b> Defined Sample Type : </b> </br>
+Green = Good Quality (GQ) </br>
+Blue = Decent Quality (DQ) </br>
+Red = Poor Quality (PQ) </br>
 <details markdown="1">
 <summary>Click here to see result summary</summary>
 </br>
@@ -107,7 +108,11 @@ Red = Poor Quality
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196102991-2be0bffe-c999-465b-8015-2a4a1961c29f.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196392402-9ce60b18-da3c-4482-b203-f2af0a2bddb9.jpg"/> </td>
-      <td> </td>
+      <td> 
+        GQ Rate: </br>3 / 20  = <b>15%</b> </br>
+        DQ Rate: </br>7 / 20  = <b>35%</b> </br>
+        PQ Rate: </br>10 / 20 = <b>50%</b>
+      </td>
 
   </tr>
   <tr> 
@@ -118,7 +123,11 @@ Red = Poor Quality
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196103653-0acb5c9f-d21c-4932-a551-16047f797b67.png"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196393687-e97714d4-2d35-45ed-b649-26384365c805.jpg"/> </td>
-      <td> </td>
+      <td> 
+        GQ Rate: </br>3 / 20  = <b>15%</b> </br>
+        DQ Rate: </br>2 / 20  = <b>10%</b> </br>
+        PQ Rate: </br>15 / 20 = <b>75%</b>
+      </td>
   </tr>
   <tr> 
       <td>
@@ -128,7 +137,11 @@ Red = Poor Quality
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196108877-23628a17-5480-4fc7-b3be-6aadb2f678fb.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196393826-f8ab1a4e-98f1-4620-9edf-10cd851ade75.jpg"/> </td>
-      <td> </td>
+      <td> 
+        GQ Rate: </br>1 / 20  = <b>5%</b> </br>
+        DQ Rate: </br>4 / 20  = <b>40%</b> </br>
+        PQ Rate: </br>15 / 20 = <b>75%</b>
+      </td>
   </tr>
 </table>
 </details>
