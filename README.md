@@ -103,7 +103,7 @@ Red = Poor Quality (PQ) </br>
   <tr> 
       <td>
         <b>General Param </b>: batch size:10, epoch:40 </br>
-        <b>Generator     </b>: truncated normal(stddev) weight init:0.2, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.02, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
         <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196102991-2be0bffe-c999-465b-8015-2a4a1961c29f.jpg"/> </td>
@@ -118,7 +118,7 @@ Red = Poor Quality (PQ) </br>
   <tr> 
       <td>
         <b>General Param </b>: batch size:64, epoch:40 </br>
-        <b>Generator     </b>: truncated normal(stddev) weight init:0.2, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.02, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
         <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196103653-0acb5c9f-d21c-4932-a551-16047f797b67.png"/> </td>
@@ -132,11 +132,39 @@ Red = Poor Quality (PQ) </br>
   <tr> 
       <td>
         <b>General Param </b>: batch size:64, epoch:40 </br>
-        <b>Generator     </b>: truncated normal(stddev) weight init:0.2 </br> 
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.02 </br> 
         <b>Discriminator </b>: discriminator batch norm(momentum):0.8 </br>
       </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196108877-23628a17-5480-4fc7-b3be-6aadb2f678fb.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/196393826-f8ab1a4e-98f1-4620-9edf-10cd851ade75.jpg"/> </td>
+      <td> 
+        GQ Rate: </br>1 / 20  = <b>5%</b> </br>
+        DQ Rate: </br>4 / 20  = <b>40%</b> </br>
+        PQ Rate: </br>15 / 20 = <b>75%</b>
+      </td>
+  </tr>
+  <tr> 
+      <td>
+        <b>General Param </b>: batch size:64, epoch:200 </br>
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.02, increasing conv filter to (128, 64, 64) </br> 
+        <b>Discriminator </b>: discriminator batch norm(momentum):0.8, decreasement conv filter to (32, 64, 64, 128) </br>
+      </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/198332601-d875484d-8c72-42ef-a5b8-9451cacea7a2.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/198331231-7c1cd038-eacf-46a3-a05f-0327fce1788f.jpg"/> </td>
+      <td> 
+        GQ Rate: </br>1 / 20  = <b>5%</b> </br>
+        DQ Rate: </br>4 / 20  = <b>40%</b> </br>
+        PQ Rate: </br>15 / 20 = <b>75%</b>
+      </td>
+  </tr>
+  <tr>
+      <td>
+        <b>General Param </b>: batch size:64, epoch:200 </br>
+        <b>Generator     </b>: truncated normal(stddev) weight init:0.02, increasing conv filter to (128, 128, 64) </br> 
+        <b>Discriminator </b>: discriminator batch norm(momentum):0.8, decreasement conv filter to (32, 64, 64, 128) </br>
+      </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/198333812-38339ea5-b63c-4e0d-988e-06bd342924f4.jpg"/> </td>
+      <td> <img src="https://user-images.githubusercontent.com/54882818/198333889-527964ec-b65d-4796-b7f5-6791710e36ef.jpg"/> </td>
       <td> 
         GQ Rate: </br>1 / 20  = <b>5%</b> </br>
         DQ Rate: </br>4 / 20  = <b>40%</b> </br>
