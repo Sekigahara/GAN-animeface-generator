@@ -152,9 +152,9 @@ Red = Poor Quality (PQ) </br>
       <td> <img src="https://user-images.githubusercontent.com/54882818/198332601-d875484d-8c72-42ef-a5b8-9451cacea7a2.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/198331231-7c1cd038-eacf-46a3-a05f-0327fce1788f.jpg"/> </td>
       <td> 
-        GQ Rate: </br>1 / 20  = <b>5%</b> </br>
-        DQ Rate: </br>4 / 20  = <b>40%</b> </br>
-        PQ Rate: </br>15 / 20 = <b>75%</b>
+        GQ Rate: </br>3 / 20  = <b>15%</b> </br>
+        DQ Rate: </br>8 / 20  = <b>40%</b> </br>
+        PQ Rate: </br>9 / 20 = <b>45%</b>
       </td>
   </tr>
   <tr>
@@ -166,9 +166,9 @@ Red = Poor Quality (PQ) </br>
       <td> <img src="https://user-images.githubusercontent.com/54882818/198333812-38339ea5-b63c-4e0d-988e-06bd342924f4.jpg"/> </td>
       <td> <img src="https://user-images.githubusercontent.com/54882818/198333889-527964ec-b65d-4796-b7f5-6791710e36ef.jpg"/> </td>
       <td> 
-        GQ Rate: </br>1 / 20  = <b>5%</b> </br>
-        DQ Rate: </br>4 / 20  = <b>40%</b> </br>
-        PQ Rate: </br>15 / 20 = <b>75%</b>
+        GQ Rate: </br>5 / 20  = <b>25%</b> </br>
+        DQ Rate: </br>9 / 20  = <b>45%</b> </br>
+        PQ Rate: </br>6 / 20 = <b>30%</b>
       </td>
   </tr>
 </table>
