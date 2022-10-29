@@ -95,12 +95,14 @@ Red = Poor Quality (PQ) </br>
 </br>
 <table style="width:200%">
   <tr> 
+      <th> Figure Number </th>
       <th> Parameter Configuration </th>
       <th> Generator and Discriminator Loss </th>
       <th> Result Sample </th>
       <th> Average Good Sample </th>
   </tr>
-  <tr> 
+  <tr>
+      <td>Figure 1 </td>
       <td>
         <b>General Param </b>: batch size:10, epoch:40 </br>
         <b>Generator     </b>: truncated normal(stddev) weight init:0.02, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
@@ -115,7 +117,8 @@ Red = Poor Quality (PQ) </br>
       </td>
 
   </tr>
-  <tr> 
+  <tr>
+      <td>Figure 2 </td>
       <td>
         <b>General Param </b>: batch size:64, epoch:40 </br>
         <b>Generator     </b>: truncated normal(stddev) weight init:0.02, generator batch norm(momentum; epsilon):0.8; 10**5 </br> 
@@ -130,6 +133,7 @@ Red = Poor Quality (PQ) </br>
       </td>
   </tr>
   <tr> 
+      <td>Figure 3 </td>
       <td>
         <b>General Param </b>: batch size:64, epoch:40 </br>
         <b>Generator     </b>: truncated normal(stddev) weight init:0.02 </br> 
@@ -143,7 +147,8 @@ Red = Poor Quality (PQ) </br>
         PQ Rate: </br>15 / 20 = <b>75%</b>
       </td>
   </tr>
-  <tr> 
+  <tr>
+      <td>Figure 4 </td>
       <td>
         <b>General Param </b>: batch size:64, epoch:200 </br>
         <b>Generator     </b>: truncated normal(stddev) weight init:0.02, increasing conv filter to (128, 64, 64) </br> 
@@ -158,6 +163,7 @@ Red = Poor Quality (PQ) </br>
       </td>
   </tr>
   <tr>
+      <td>Figure 5 </td>
       <td>
         <b>General Param </b>: batch size:64, epoch:200 </br>
         <b>Generator     </b>: truncated normal(stddev) weight init:0.02, increasing conv filter to (128, 128, 64) </br> 
@@ -173,5 +179,6 @@ Red = Poor Quality (PQ) </br>
   </tr>
 </table>
 </details>
+The result of the experiment in this section shows that, based on the generator loss and discriminator loss, in order to reach the nash equilibrium generator and discriminator must be in opposite way, generator must be reach local maxima and discriminator must reach local minima. However, in context of real application reaching nash equilibrium is very hard. Also, in the final result the overall good result shows when the discriminator and generator loss become really fluctuative and showing great adversariality as shown in figure 1, 4 and 5.
 
 ## Conclusion
