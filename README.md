@@ -87,9 +87,9 @@ Same rule is applied in this scenario compared to the first scnario, however the
 <b>Note : </b> in this scenario, the only parameter that been changed are ```batch size, addition of batch norm(momentum and epsilon) and weight initialization```.</br>
 <b>Additional Note : </b> The average of good sample is calculated by : ```sum of [defined_type] sample / total generated sample``` </br>
 <b> Defined Sample Type : </b> </br>
-Green = Good Quality (GQ) </br>
-Blue = Decent Quality (DQ) </br>
-Red = Poor Quality (PQ) </br>
+Green = Good Quality (GQ) <b> where : </b> overall of the image is recognizable as face and less distorted</br>
+Blue = Decent Quality (DQ) <b> where : </b> overall of the image is recognizable as face and slight distorted</br>
+Red = Poor Quality (PQ) <b> where : </b> overall of the image is not recognizable as face and sometimes very distorted</br>
 <details markdown="1">
 <summary>Click here to see result summary</summary>
 </br>
